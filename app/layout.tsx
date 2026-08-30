@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Ciclo DTE | Panel operativo',
-  description: 'Panel de gestión para la recolección y entrega responsable de materiales tecnológicos.',
+  title: 'Ciclo DTE | Circuito responsable de recolección',
+  description: 'Gestión responsable de pilas, baterías y equipamiento tecnológico en escuelas de la Dirección de Tecnología Educativa.',
   generator: 'v0.app',
   icons: {
     icon: [
