@@ -46,6 +46,9 @@ body {
   --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --color-status-success: var(--status-success);
+  --color-status-warning: var(--status-warning);
+  --color-status-info: var(--status-info);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -75,6 +78,9 @@ body {
   --border: #dce5e9;
   --input: #dce5e9;
   --ring: #00aec3;
+  --status-success: #238b5b;
+  --status-warning: #b7791f;
+  --status-info: #007f9a;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
