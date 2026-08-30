@@ -24,6 +24,7 @@ import {
   ArrowLeft,
 } from 'lucide-react'
 import { StatCard } from '@/components/panel/stat-card'
+import { BatteryMark } from '@/components/battery-mark'
 import { SidebarNavItem } from '@/components/panel/sidebar-nav-item'
 import { RecordRow } from '@/components/panel/record-row'
 import { initialRecords, sectionPreviews, type Category } from '@/lib/records'
@@ -96,7 +97,8 @@ export default function PanelPage() {
             </button>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <img src="/logo-dte-v3.png" alt="Dirección de Tecnología Educativa" className="h-16 w-auto" />
+            <BatteryMark className="size-8 text-sidebar-foreground" />
+            <img src="/logo-dte-v3.png" alt="Dirección de Tecnología Educativa" className="h-24 w-auto" />
             <p className="text-xs font-semibold uppercase tracking-wide text-sidebar-foreground/80">Ciclo DTE</p>
           </div>
         </div>
