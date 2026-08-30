@@ -498,8 +498,16 @@ export default function EscuelasPage() {
               En articulación con
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-              <img src="/logo-municipalidad-la-plata.svg" alt="Municipalidad de La Plata" className="h-7 w-auto sm:h-8" />
-              <img src="/logo-unlp.svg" alt="Universidad Nacional de La Plata" className="h-9 w-auto sm:h-10" />
+              <img
+                src="/logo-municipalidad-la-plata.svg"
+                alt="Municipalidad de La Plata"
+                className="h-auto w-[140px] sm:w-[170px] md:w-[200px]"
+              />
+              <img
+                src="/logo-unlp.svg"
+                alt="Universidad Nacional de La Plata"
+                className="h-auto w-[140px] sm:w-[170px] md:w-[200px]"
+              />
             </div>
           </div>
           <div className="mt-2 flex flex-col items-center gap-2 border-t border-primary-foreground/20 pt-5">
