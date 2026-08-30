@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { ArrowRight, Battery, ClipboardCheck, GraduationCap, Leaf, Laptop, PackageCheck, Recycle, Route, ShieldCheck, Truck, Users } from 'lucide-react'
+import { BatteryMark } from '@/components/battery-mark'
 
 const CTA_HREF = 'mailto:participacion@dte.gba.gob.ar?subject=Quiero%20que%20mi%20escuela%20participe'
 
@@ -23,10 +24,6 @@ const impact = [
   { value: '24', label: 'Entregas realizadas' },
 ]
 
-function BatteryMark() {
-  return <svg viewBox="0 0 80 104" className="size-7" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="10" y="14" width="56" height="90" rx="10" stroke="currentColor" strokeWidth="7" /><rect x="30" y="2" width="16" height="14" rx="3" fill="currentColor" /><path d="M38 30 24 62h12l-6 30 24-38H40l8-24Z" fill="currentColor" /></svg>
-}
-
 export default function EscuelasPage() {
   return <main className="min-h-screen overflow-hidden bg-background text-foreground">
     <header className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 md:px-8">
@@ -47,18 +44,23 @@ export default function EscuelasPage() {
 
     <section className="px-5 py-24 text-center md:px-8 md:py-32"><div className="mx-auto max-w-2xl"><div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground"><Users className="size-7" /></div><h2 className="mt-6 text-4xl font-extrabold tracking-tight md:text-5xl">¿Nos sumamos?</h2><p className="mx-auto mt-5 max-w-lg text-lg leading-8 text-muted-foreground">Tu escuela puede iniciar el circuito y ser parte de una gestión tecnológica más responsable.</p><Link href={CTA_HREF} className="mt-8 inline-flex items-center gap-3 rounded-xl bg-primary px-6 py-3.5 font-bold text-primary-foreground shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:bg-primary/90">Quiero que mi escuela participe <ArrowRight className="size-5" /></Link></div></section>
 
-    <footer className="bg-[linear-gradient(110deg,#E81F76,#417099_55%,#00AEC3)] px-5 py-14 text-primary-foreground md:px-8">
+    <footer className="bg-[linear-gradient(110deg,#E81F76,#417099_55%,#00AEC3)] px-5 py-16 text-primary-foreground md:px-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
         <BatteryMark />
         <img
           src="/logo-dte-v2.svg"
           alt="Dirección de Tecnología Educativa · Gobierno de la Provincia de Buenos Aires"
-          className="h-12 w-auto sm:h-14 md:h-16"
+          className="h-auto w-1/2 min-w-[260px] max-w-2xl"
         />
         <p className="text-sm text-primary-foreground/80">Ciclo DTE · Gestión responsable</p>
-        <p className="text-xs text-primary-foreground/70">
-          © {new Date().getFullYear()} Dirección de Tecnología Educativa – Provincia de Buenos Aires. Todos los derechos reservados.
-        </p>
+        <div className="mt-2 flex flex-col items-center gap-2 border-t border-primary-foreground/20 pt-5">
+          <p className="rounded-full border border-dashed border-primary-foreground/40 bg-primary-foreground/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary-foreground">
+            Versión demo · Todavía no es una aplicación oficial de la DTE
+          </p>
+          <p className="text-xs text-primary-foreground/70">
+            © {new Date().getFullYear()} Dirección de Tecnología Educativa (DTE), Región 1 · Desarrollado por Silvio Ridolfi, Facilitador de Educación Digital
+          </p>
+        </div>
       </div>
     </footer>
   </main>
