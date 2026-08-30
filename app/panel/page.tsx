@@ -89,21 +89,16 @@ export default function PanelPage() {
           mobileNav ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex h-20 items-center gap-3 border-b border-sidebar-border px-6">
-          <div className="flex size-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-            <svg viewBox="0 0 80 104" className="size-5" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="10" y="14" width="56" height="90" rx="10" fill="none" stroke="currentColor" strokeWidth="7" />
-              <rect x="30" y="2" width="16" height="14" rx="3" fill="currentColor" />
-              <path d="M 38 30 L 24 62 L 36 62 L 30 92 L 54 54 L 40 54 Z" fill="currentColor" />
-            </svg>
+        <div className="border-b border-sidebar-border px-6 py-6">
+          <div className="flex justify-end md:hidden">
+            <button className="text-sidebar-foreground" aria-label="Cerrar menú" onClick={() => setMobileNav(false)}>
+              <X className="size-5 text-sidebar-foreground" />
+            </button>
           </div>
-          <div>
-            <p className="text-sm font-bold leading-tight text-sidebar-foreground">Ciclo DTE</p>
-            <p className="text-xs text-sidebar-foreground">DTE · Buenos Aires</p>
+          <div className="flex flex-col items-center gap-2">
+            <img src="/logo-dte-v3.png" alt="Dirección de Tecnología Educativa" className="h-16 w-auto" />
+            <p className="text-xs font-semibold uppercase tracking-wide text-sidebar-foreground/80">Ciclo DTE</p>
           </div>
-          <button className="ml-auto text-sidebar-foreground md:hidden" aria-label="Cerrar menú" onClick={() => setMobileNav(false)}>
-            <X className="size-5 text-sidebar-foreground" />
-          </button>
         </div>
 
         <nav className="flex flex-1 flex-col gap-1 px-3 py-6" aria-label="Navegación principal">
@@ -157,6 +152,9 @@ export default function PanelPage() {
               <p className="text-[11px] text-sidebar-foreground">Acceso operativo</p>
             </div>
           </div>
+          <p className="mt-3 text-center text-[10px] leading-tight text-sidebar-foreground/60">
+            © {new Date().getFullYear()} Dirección de Tecnología Educativa – Provincia de Buenos Aires
+          </p>
         </div>
       </aside>
 
