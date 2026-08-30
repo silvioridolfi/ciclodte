@@ -10,7 +10,6 @@ import {
   Handshake,
   Laptop,
   Leaf,
-  MapPin,
   MonitorX,
   Recycle,
   ShieldCheck,
@@ -120,19 +119,22 @@ const allies = [
     badge: 'Coordinación',
     name: 'Dirección de Tecnología Educativa',
     text: 'Articula el circuito, acompaña a los equipos territoriales, genera materiales de orientación y sostiene la dimensión pedagógica.',
-    icon: ShieldCheck,
+    logoIcon: BatteryMark,
+    logoBg: 'bg-primary',
   },
   {
     badge: 'Recepción de pilas',
     name: 'Municipalidad de La Plata — "Chau Pilas"',
     text: 'Recibe y gestiona pilas y baterías usadas en el Centro Administrativo Municipal y otros puntos de la ciudad.',
-    icon: MapPin,
+    logoSrc: '/logo-municipalidad-la-plata.svg',
+    logoBg: 'bg-[#417099]',
   },
   {
     badge: 'Segunda etapa',
     name: 'Universidad Nacional de La Plata — EKOA',
     text: 'Recibe equipamiento informático en desuso para reparación, reutilización, donación o desmantelamiento responsable.',
-    icon: GraduationCap,
+    logoSrc: '/logo-unlp.svg',
+    logoBg: 'bg-[#2c4a63]',
   },
 ]
 
@@ -412,11 +414,15 @@ export default function EscuelasPage() {
         </p>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {allies.map((ally) => {
-            const Icon = ally.icon
+            const LogoIcon = ally.logoIcon
             return (
               <article key={ally.name} className="rounded-2xl border border-border bg-card p-7 shadow-sm">
-                <span className="flex size-12 items-center justify-center rounded-xl bg-secondary text-secondary-foreground">
-                  <Icon className="size-6" />
+                <span className={`flex size-14 items-center justify-center rounded-xl p-2.5 text-white ${ally.logoBg}`}>
+                  {ally.logoSrc ? (
+                    <img src={ally.logoSrc} alt={ally.name} className="h-full w-full object-contain" />
+                  ) : LogoIcon ? (
+                    <LogoIcon className="size-7" />
+                  ) : null}
                 </span>
                 <span className="mt-5 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary">
                   {ally.badge}
@@ -487,6 +493,15 @@ export default function EscuelasPage() {
             className="h-auto w-1/2 min-w-[260px]"
           />
           <p className="text-sm text-primary-foreground/80">Ciclo DTE · Gestión responsable</p>
+          <div className="flex flex-col items-center gap-3 border-t border-primary-foreground/20 pt-5">
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-foreground/70">
+              En articulación con
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+              <img src="/logo-municipalidad-la-plata.svg" alt="Municipalidad de La Plata" className="h-7 w-auto sm:h-8" />
+              <img src="/logo-unlp.svg" alt="Universidad Nacional de La Plata" className="h-9 w-auto sm:h-10" />
+            </div>
+          </div>
           <div className="mt-2 flex flex-col items-center gap-2 border-t border-primary-foreground/20 pt-5">
             <p className="rounded-full border border-dashed border-primary-foreground/40 bg-primary-foreground/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary-foreground">
               Versión demo
