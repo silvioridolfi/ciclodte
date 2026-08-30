@@ -417,11 +417,11 @@ export default function EscuelasPage() {
             const LogoIcon = ally.logoIcon
             return (
               <article key={ally.name} className="rounded-2xl border border-border bg-card p-7 shadow-sm">
-                <span className={`flex size-14 items-center justify-center rounded-xl p-2.5 text-white ${ally.logoBg}`}>
+                <span className={`flex size-20 items-center justify-center rounded-xl p-3.5 text-white ${ally.logoBg}`}>
                   {ally.logoSrc ? (
                     <img src={ally.logoSrc} alt={ally.name} className="h-full w-full object-contain" />
                   ) : LogoIcon ? (
-                    <LogoIcon className="size-7" />
+                    <LogoIcon className="size-9" />
                   ) : null}
                 </span>
                 <span className="mt-5 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary">
@@ -497,16 +497,16 @@ export default function EscuelasPage() {
             <p className="text-[11px] font-semibold uppercase tracking-wide text-primary-foreground/70">
               En articulación con
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
               <img
                 src="/logo-municipalidad-la-plata.svg"
                 alt="Municipalidad de La Plata"
-                className="h-auto w-[140px] sm:w-[170px] md:w-[200px]"
+                className="h-auto w-[220px] sm:w-[280px] md:w-[340px]"
               />
               <img
                 src="/logo-unlp.svg"
                 alt="Universidad Nacional de La Plata"
-                className="h-auto w-[140px] sm:w-[170px] md:w-[200px]"
+                className="h-auto w-[220px] sm:w-[280px] md:w-[340px]"
               />
             </div>
           </div>
