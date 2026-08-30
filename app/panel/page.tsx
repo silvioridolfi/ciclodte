@@ -155,7 +155,7 @@ export default function PanelPage() {
             </div>
           </div>
           <p className="mt-3 text-center text-[10px] leading-tight text-sidebar-foreground/60">
-            © {new Date().getFullYear()} Dirección de Tecnología Educativa – Provincia de Buenos Aires
+            © {new Date().getFullYear()} Dirección de Tecnología Educativa (DTE), Región 1 · Desarrollado por Silvio Ridolfi, Facilitador de Educación Digital
           </p>
         </div>
       </aside>
@@ -169,8 +169,8 @@ export default function PanelPage() {
             <div>
               <div className="flex items-center gap-2">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">Panel de gestión</p>
-                <span className="rounded-full border border-dashed border-accent/50 bg-accent/10 px-2 py-0.5 text-[10px] font-bold text-accent">
-                  Demo
+                <span className="rounded-full border border-dashed border-accent/50 bg-accent/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-accent">
+                  Versión demo
                 </span>
               </div>
               <h1 className="text-xl font-bold">{activeSection}</h1>

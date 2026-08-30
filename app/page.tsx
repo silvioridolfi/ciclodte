@@ -44,18 +44,18 @@ export default function EscuelasPage() {
 
     <section className="px-5 py-24 text-center md:px-8 md:py-32"><div className="mx-auto max-w-2xl"><div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground"><Users className="size-7" /></div><h2 className="mt-6 text-4xl font-extrabold tracking-tight md:text-5xl">¿Nos sumamos?</h2><p className="mx-auto mt-5 max-w-lg text-lg leading-8 text-muted-foreground">Tu escuela puede iniciar el circuito y ser parte de una gestión tecnológica más responsable.</p><Link href={CTA_HREF} className="mt-8 inline-flex items-center gap-3 rounded-xl bg-primary px-6 py-3.5 font-bold text-primary-foreground shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:bg-primary/90">Quiero que mi escuela participe <ArrowRight className="size-5" /></Link></div></section>
 
-    <footer className="bg-[linear-gradient(110deg,#E81F76,#417099_55%,#00AEC3)] px-5 py-16 text-primary-foreground md:px-8">
+    <footer className="bg-[linear-gradient(110deg,#E81F76,#417099_55%,#00AEC3)] px-5 py-10 text-primary-foreground md:px-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
         <BatteryMark />
         <img
           src="/logo-dte-v2.svg"
           alt="Dirección de Tecnología Educativa · Gobierno de la Provincia de Buenos Aires"
-          className="h-auto w-1/2 min-w-[260px] max-w-2xl"
+          className="h-auto w-1/2 min-w-[260px]"
         />
         <p className="text-sm text-primary-foreground/80">Ciclo DTE · Gestión responsable</p>
         <div className="mt-2 flex flex-col items-center gap-2 border-t border-primary-foreground/20 pt-5">
           <p className="rounded-full border border-dashed border-primary-foreground/40 bg-primary-foreground/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary-foreground">
-            Versión demo · Todavía no es una aplicación oficial de la DTE
+            Versión demo
           </p>
           <p className="text-xs text-primary-foreground/70">
             © {new Date().getFullYear()} Dirección de Tecnología Educativa (DTE), Región 1 · Desarrollado por Silvio Ridolfi, Facilitador de Educación Digital
