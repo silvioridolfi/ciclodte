@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Gestión de pilas | Panel operativo',
-  description: 'Panel de gestión para la recolección y entrega responsable de pilas y baterías.',
+  title: 'Ciclo DTE | Panel operativo',
+  description: 'Panel de gestión para la recolección y entrega responsable de materiales tecnológicos.',
   generator: 'v0.app',
   icons: {
     icon: [
