@@ -60,43 +60,80 @@ body {
 
 :root {
   color-scheme: light;
-  --background: #f5f7f8;
-  --foreground: #243746;
+  --background: #faf7f0;
+  --foreground: #2b2823;
   --card: #ffffff;
-  --card-foreground: #243746;
+  --card-foreground: #2b2823;
   --popover: #ffffff;
-  --popover-foreground: #243746;
-  --primary: #e81f76;
+  --popover-foreground: #2b2823;
+  --primary: #3f7d5c;
   --primary-foreground: #ffffff;
-  --secondary: #e8f0f3;
-  --secondary-foreground: #417099;
-  --muted: #eef2f4;
-  --muted-foreground: #60717d;
-  --accent: #00aec3;
+  --secondary: #f3ead9;
+  --secondary-foreground: #8a5a1f;
+  --muted: #f0ece2;
+  --muted-foreground: #756e60;
+  --accent: #d98e2b;
   --accent-foreground: #ffffff;
-  --destructive: #e81f76;
-  --border: #dce5e9;
-  --input: #dce5e9;
-  --ring: #00aec3;
-  --status-success: #238b5b;
-  --status-warning: #b7791f;
-  --status-info: #007f9a;
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: #417099;
+  --destructive: #b3452f;
+  --border: #e6dfd0;
+  --input: #e6dfd0;
+  --ring: #3f7d5c;
+  --status-success: #3f7d5c;
+  --status-warning: #c97a1f;
+  --status-info: #5b7c99;
+  --chart-1: #3f7d5c;
+  --chart-2: #d98e2b;
+  --chart-3: #5b7c99;
+  --chart-4: #c97a1f;
+  --chart-5: #b3452f;
+  --radius: 1rem;
+  --sidebar: linear-gradient(180deg, #2f6b4f 0%, #1f4a38 100%);
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #e81f76;
+  --sidebar-primary: #d98e2b;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #315a7c;
+  --sidebar-accent: #3a6350;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #5f89a5;
-  --sidebar-ring: #00aec3;
+  --sidebar-border: #4a7a63;
+  --sidebar-ring: #d98e2b;
 }
 
+
+.sidebar-gradient {
+  background: var(--sidebar);
+}
+
+[aria-label="Indicadores principales"] article {
+  position: relative;
+  border: 0;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 28px rgba(63, 125, 92, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+[aria-label="Indicadores principales"] article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(63, 125, 92, 0.18);
+}
+
+[aria-label="Indicadores principales"] article > div:first-child > div:first-child {
+  margin-top: -2.25rem;
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 9px 18px rgba(43, 40, 35, 0.2);
+}
+
+[aria-label="Indicadores principales"] article:nth-child(1) > div:first-child > div:first-child {
+  background: linear-gradient(135deg, #3f7d5c, #2f6b4f);
+}
+[aria-label="Indicadores principales"] article:nth-child(2) > div:first-child > div:first-child {
+  background: linear-gradient(135deg, #d98e2b, #c97a1f);
+}
+[aria-label="Indicadores principales"] article:nth-child(3) > div:first-child > div:first-child {
+  background: linear-gradient(135deg, #5b7c99, #3f617d);
+}
+[aria-label="Indicadores principales"] article:nth-child(4) > div:first-child > div:first-child {
+  background: linear-gradient(135deg, #b3452f, #8f3826);
+}
 
 @layer base {
   * {
