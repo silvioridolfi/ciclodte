@@ -490,7 +490,7 @@ export default function EscuelasPage() {
           <img
             src="/logo-dte-v2.svg"
             alt="Dirección de Tecnología Educativa · Gobierno de la Provincia de Buenos Aires"
-            className="h-auto w-1/2 min-w-[260px]"
+            className="h-auto w-[320px] sm:w-[480px] md:w-[620px] lg:w-[760px]"
           />
           <p className="text-sm text-primary-foreground/80">Ciclo DTE · Gestión responsable</p>
           <div className="flex flex-col items-center gap-3 border-t border-primary-foreground/20 pt-5">
