@@ -141,7 +141,7 @@ const allies = [
 const numbers = [
   { value: '3', label: 'Instituciones articuladas' },
   { value: '2', label: 'Circuitos de materiales' },
-  { value: '5', label: 'Distritos de la Región 1' },
+  { value: '6', label: 'Distritos de la Región 1' },
   { value: '0', label: 'Estructura nueva que crear desde cero' },
 ]
 
