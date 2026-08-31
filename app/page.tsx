@@ -19,9 +19,6 @@ import {
 } from 'lucide-react'
 import { BatteryMark } from '@/components/battery-mark'
 
-const CTA_HREF = 'mailto:participacion@dte.gba.gob.ar?subject=Quiero%20que%20mi%20escuela%20participe'
-const CTA_FED_HREF = 'mailto:participacion@dte.gba.gob.ar?subject=Quiero%20hablar%20con%20mi%20FED%20de%20Regi%C3%B3n%201'
-
 const navLinks = [
   { label: 'El problema', href: '#el-problema' },
   { label: 'La propuesta', href: '#la-propuesta' },
@@ -175,12 +172,14 @@ export default function EscuelasPage() {
             <Link href="/panel" className="hidden text-xs font-semibold text-muted-foreground transition hover:text-primary sm:inline">
               Acceso al panel
             </Link>
-            <Link
-              href={CTA_HREF}
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground shadow-sm transition hover:-translate-y-0.5 hover:bg-primary/90"
+            <button
+              type="button"
+              disabled
+              title="El mecanismo de inscripción todavía está en definición"
+              className="inline-flex cursor-not-allowed items-center gap-2 rounded-full bg-primary/50 px-4 py-2.5 text-sm font-bold text-primary-foreground/70 shadow-sm"
             >
               Sumar mi institución
-            </Link>
+            </button>
           </div>
         </div>
       </header>
@@ -200,12 +199,14 @@ export default function EscuelasPage() {
             educativa real, con impacto ambiental medible.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
-            <Link
-              href={CTA_HREF}
-              className="inline-flex items-center gap-3 rounded-xl bg-primary px-6 py-3.5 font-bold text-primary-foreground shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:bg-primary/90"
+            <button
+              type="button"
+              disabled
+              title="El mecanismo de inscripción todavía está en definición"
+              className="inline-flex cursor-not-allowed items-center gap-3 rounded-xl bg-primary/50 px-6 py-3.5 font-bold text-primary-foreground/70 shadow-lg shadow-primary/10"
             >
               Quiero que mi escuela participe <ArrowRight className="size-5" />
-            </Link>
+            </button>
             <a
               href="#como-funciona"
               className="inline-flex items-center gap-2 rounded-xl border border-border px-6 py-3.5 font-bold text-foreground transition hover:border-primary hover:text-primary"
@@ -471,19 +472,26 @@ export default function EscuelasPage() {
             ganas de que los chicos sean protagonistas de algo real.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href={CTA_HREF}
-              className="inline-flex items-center gap-3 rounded-xl bg-primary px-6 py-3.5 font-bold text-primary-foreground shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:bg-primary/90"
+            <button
+              type="button"
+              disabled
+              title="El mecanismo de inscripción todavía está en definición"
+              className="inline-flex cursor-not-allowed items-center gap-3 rounded-xl bg-primary/50 px-6 py-3.5 font-bold text-primary-foreground/70 shadow-lg shadow-primary/10"
             >
               Quiero sumar mi institución <ArrowRight className="size-5" />
-            </Link>
-            <Link
-              href={CTA_FED_HREF}
-              className="inline-flex items-center gap-2 rounded-xl border border-border px-6 py-3.5 font-bold text-foreground transition hover:border-primary hover:text-primary"
+            </button>
+            <button
+              type="button"
+              disabled
+              title="El mecanismo de contacto todavía está en definición"
+              className="inline-flex cursor-not-allowed items-center gap-2 rounded-xl border border-border px-6 py-3.5 font-bold text-muted-foreground"
             >
               Hablar con mi FED de Región 1
-            </Link>
+            </button>
           </div>
+          <p className="mt-4 text-xs text-muted-foreground">
+            El mecanismo de inscripción todavía está en definición — pronto vas a poder sumarte desde acá.
+          </p>
         </div>
       </section>
 
