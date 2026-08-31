@@ -127,6 +127,7 @@ const allies = [
     name: 'Municipalidad de La Plata — "Chau Pilas"',
     text: 'Recibe y gestiona pilas y baterías usadas en el Centro Administrativo Municipal y otros puntos de la ciudad.',
     logoSrc: '/logo-municipalidad-la-plata.svg',
+    logoCrop: 'aspect-[0.58]',
     logoBg: 'bg-[#417099]',
   },
   {
@@ -134,6 +135,7 @@ const allies = [
     name: 'Universidad Nacional de La Plata — EKOA',
     text: 'Recibe equipamiento informático en desuso para reparación, reutilización, donación o desmantelamiento responsable.',
     logoSrc: '/logo-unlp.svg',
+    logoCrop: 'aspect-[0.86]',
     logoBg: 'bg-[#2c4a63]',
   },
 ]
@@ -417,9 +419,11 @@ export default function EscuelasPage() {
             const LogoIcon = ally.logoIcon
             return (
               <article key={ally.name} className="rounded-2xl border border-border bg-card p-7 shadow-sm">
-                <span className={`flex size-20 items-center justify-center rounded-xl p-3.5 text-white ${ally.logoBg}`}>
+                <span className={`flex size-20 items-center justify-center overflow-hidden rounded-xl p-3.5 text-white ${ally.logoBg}`}>
                   {ally.logoSrc ? (
-                    <img src={ally.logoSrc} alt={ally.name} className="h-full w-full object-contain" />
+                    <div className={`h-full ${ally.logoCrop} overflow-hidden`}>
+                      <img src={ally.logoSrc} alt={ally.name} className="h-full w-full object-cover object-left" />
+                    </div>
                   ) : LogoIcon ? (
                     <LogoIcon className="size-9" />
                   ) : null}
@@ -498,16 +502,20 @@ export default function EscuelasPage() {
               En articulación con
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-              <img
-                src="/logo-municipalidad-la-plata.svg"
-                alt="Municipalidad de La Plata"
-                className="h-auto w-[220px] sm:w-[280px] md:w-[340px]"
-              />
-              <img
-                src="/logo-unlp.svg"
-                alt="Universidad Nacional de La Plata"
-                className="h-auto w-[220px] sm:w-[280px] md:w-[340px]"
-              />
+              <div className="aspect-[0.58] h-16 overflow-hidden sm:h-20 md:h-24">
+                <img
+                  src="/logo-municipalidad-la-plata.svg"
+                  alt="Municipalidad de La Plata"
+                  className="h-full w-full object-cover object-left"
+                />
+              </div>
+              <div className="aspect-[0.86] h-16 overflow-hidden sm:h-20 md:h-24">
+                <img
+                  src="/logo-unlp.svg"
+                  alt="Universidad Nacional de La Plata"
+                  className="h-full w-full object-cover object-left"
+                />
+              </div>
             </div>
           </div>
           <div className="mt-2 flex flex-col items-center gap-2 border-t border-primary-foreground/20 pt-5">
